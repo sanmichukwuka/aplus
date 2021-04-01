@@ -1,10 +1,20 @@
-.navbar {
+ /* .navbar {
   background-color: white; /*Background color underneath jumbotron */
-  height: 80px;
+  /* height: 80px;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: center; */
+ /* }  */ */
+
+.navbar-toggle {
+  margin-top: 90px; /* Pushes the logo down */
 }
+
+
+.logo {
+  width: 40%; /* for the logo */
+}
+
 
 .menu-bars {
   margin-left: 2rem;
@@ -14,7 +24,7 @@
 
 .nav-menu {
   background-color: #060b26;
-  width: 250px;
+  width: 17%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -56,6 +66,7 @@
 
 .nav-menu-items {
   width: 100%;
+  margin-top: 30px;
 }
 
 .navbar-toggle {
@@ -76,5 +87,4 @@ span {
   margin-bottom: 10%;
   width: auto !important;
 }
-
 
