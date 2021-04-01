@@ -76,6 +76,7 @@ export default function BookNow() {
   const [displayPrice, setDisplayPrice] = useState(0);
   // I am storing the values of the form fill or selected in the state for post request to the server
   const [state, setState] = useState({
+    organisation: { email: "", name: "" },
     officeTypeClean: "",
     companyName: null,
     email: "",
@@ -145,13 +146,12 @@ export default function BookNow() {
   //       console.log({ response });
   //     });
   // };
-
+  console.log(state)
   const displayAggregatePrice = (howOften) => {
     const params = {
-      addTip: 0,
       howOften: howOften,
-      officeTypeClean: state.officeTypeClean,
       squareFeet: state.squareFeet,
+      email: state.organisation.email
     }
     try {
       axios

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 export default function SpecialNotes({ handleNextSection }) {
@@ -5,6 +6,8 @@ export default function SpecialNotes({ handleNextSection }) {
 
   const onTextChange = (event, type) =>
     setOrganisation({ ...organisation, [type]: event.target.value });
+
+    console.log(organisation);
 
   return (
     <div class=" mt-5 d-flex justify-content-center">
@@ -16,7 +19,7 @@ export default function SpecialNotes({ handleNextSection }) {
               Organization Name{" "}
             </label>
             <input
-              onChange={onTextChange}
+              onChange={(event) => onTextChange(event, "name")}
               placeholder="Organization Name"
               type="text"
               class="form-control"
@@ -28,7 +31,7 @@ export default function SpecialNotes({ handleNextSection }) {
               Company Email Address
             </label>
             <input
-              onChange={onTextChange}
+              onChange={(event) => onTextChange(event, "email")}
               placeholder="Company Email"
               type="email"
               class="form-control"
@@ -39,7 +42,8 @@ export default function SpecialNotes({ handleNextSection }) {
           <button
             type="button"
             className="btn mt-4 btn-lg btn-primary"
-            onClick={() => handleNextSection(organisation)}
+            // onChange={(event) => onTextChange(event, "email")}
+            onClick={() => handleNextSection("organisation", organisation)}
           >
             NEXT
           </button>
@@ -48,8 +52,6 @@ export default function SpecialNotes({ handleNextSection }) {
     </div>
   );
 }
-
-
 
 
 
