@@ -13,23 +13,16 @@ export default function Vaccum({ handleNextSection }) {
           <FormGroup onChange={handleNextSection} tag="fieldset">
             <FormGroup className="m-3" check>
               <Label check>
-                <Input value="Standard Clean" type="radio" name="radio1" /> Do you have cleaning machines available
+                <Input value="Standard Clean" type="radio" name="radio1" /> Would you prefer we use our company machines(Yes).
               </Label>
             </FormGroup>
             <DropdownItem divider />
             <FormGroup className="m-3" check>
               <Label check>
-                <Input value="Standard Plus Clean" type="radio" name="radio1" />
-                No, I rather you use my own.{" "}
+                <Input value="Standard Plus Clean" type="radio" name="radio1" />No, we have machines available.
+                {" "}
               </Label>
             </FormGroup>
-            {/* <DropdownItem divider />
-            <FormGroup className="m-3" check>
-              <Label check>
-                <Input value="Standard Plus Clean" type="radio" name="radio1" />
-                I don't want you to vacuum my carpet.{" "}
-              </Label>
-            </FormGroup> */}
           </FormGroup>
         </Card>
       </div>
