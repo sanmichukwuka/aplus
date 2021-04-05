@@ -8,7 +8,7 @@ export default function ScheduleDate({ handleNextSection }) {
   return (
     <div class="">
       <h1 className="text-primary  text-center mb-4">
-        SPECIAL NOTES OR INSTRUCTIONS?
+        Select a date For Service Appointment
       </h1>
       <div className="d-flex justify-content-center">
         <Calendar onChange={onChange} value={value} />
