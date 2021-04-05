@@ -16,17 +16,14 @@ export default function SquareFeet({ handleNextSection, data }) {
   const [squareFeet, setSquareFeet] = React.useState(data.squareFeet);
 
   const onTextChange = (value) => {
-    // setSquareFeet(value);
     handleNextSection("squareFeet", value);
-    // if (event.keyCode === 13) return handleNextSection("zipCode", zipCode);
-    // console.log(event.keyCode);
   };
 
 
   return (
     <Container py={6}>
       <Heading mb="10px" textAlign="center">
-          Square Feet
+         Select your corresponding Square Feet
       </Heading>
       <Box
         maxW={"600px"}
@@ -56,12 +53,12 @@ export default function SquareFeet({ handleNextSection, data }) {
             <Divider />
             <Radio value="UP_TO_6000">UP_TO_6000</Radio>
             <Text pl="35px" textAlign="start">
-              Call 512-934-1967 for an accurate rate
+              Call 701-306-3660 for an accurate rate
             </Text>
             <Divider />
             <Radio value="OTHER">Up_to_7000</Radio>
             <Text pl="35px" textAlign="start">
-              Call 512-934-1967 for an accurate rate
+              Call 701-306-3660 for an accurate rate
             </Text>{" "}
           </Stack>
         </RadioGroup>
