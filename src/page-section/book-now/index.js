@@ -7,7 +7,7 @@ export { default as HowDidYou } from "./HowDidYou";
 export { default as HowOften } from "./HowOften";
 export { default as SquareFeet } from "./SquareFeet";
 export { default as OfficeTypeClean } from "./OfficeTypeClean";
-export { default as Pets } from "./Pets";
+export { default as ParkingLot } from "./ParkingLot";
 export { default as PriceCalculator } from "./PriceCalculator";
 export { default as ScheduleDate } from "./ScheduleDate";
 export { default as SelectService } from "./OfficeTypeClean";
