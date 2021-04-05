@@ -16,6 +16,7 @@ import {
   SelectService,
   ServiceAddress,
   ServiceCategories,
+  CompanyInfo,
   SpecialNotes,
   SquareFeet,
   SpecialProducts,
@@ -113,7 +114,7 @@ export default function BookNow() {
       case 8:
         return <Pets handleNextSection={handleNext} />;
       case 9:
-        return <SpecialNotes handleNextSection={handleNext} />;
+        return <CompanyInfo handleNextSection={handleNext} />;
       case 10:
         return <HowDidYou handleNextSection={handleNext} />;
       case 11:
@@ -215,6 +216,7 @@ export default function BookNow() {
 // } from "../page-section/book-now";
 
 // import AppBar from "../components/AppBar";
+import CompanyInfo from '../page-section/book-now/CompanyInfo';
 
 // const sections = [
 //   "ZipCode",

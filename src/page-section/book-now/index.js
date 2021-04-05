@@ -13,7 +13,7 @@ export { default as ScheduleDate } from "./ScheduleDate";
 export { default as SelectService } from "./OfficeTypeClean";
 export { default as ServiceAddress } from "./ServiceAddress";
 export { default as ServiceCategories } from "./ServiceCategories";
-export { default as SpecialNotes } from "./SpecialNotes";
+export { default as CompanyInfo } from "./CompanyInfo";
 export { default as SpecialProducts } from "./SpecialProducts";
 export { default as Success } from "./Success";
 export { default as Vaccum } from "./Vaccum";
