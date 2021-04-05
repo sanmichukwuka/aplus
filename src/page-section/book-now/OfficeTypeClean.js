@@ -16,11 +16,6 @@ export default function OfficeTypeClean({ handleNextSection, data }) {
   const [officeTypeClean, setOfficeTypeClean] = React.useState(data.officeTypeClean);
 
   const onTextChange = (value) => {
-    // setSquareFeet(value);
-    // displayAggregatePrice(value);
-    // handleNextSection("howOften", value);
-    // if (event.keyCode === 13) return handleNextSection("zipCode", zipCode);
-    // console.log(event.keyCode);
   };
 
 
@@ -46,7 +41,6 @@ export default function OfficeTypeClean({ handleNextSection, data }) {
             <Radio value="OFFICE_CLEANING" > OFFICE CLEANING </Radio>
             <Divider />
             <Radio value="POST_CONSTRUCTION"> POST CONSTRUCTION </Radio>
-            <Divider />
           </Stack>
         </RadioGroup>
       </Box>
