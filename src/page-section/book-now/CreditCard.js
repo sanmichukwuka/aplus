@@ -1,18 +1,7 @@
 import React from "react";
 import { Heading } from "@chakra-ui/react";
 
-export default function CreditCard({ handleNextSection, displayAggregatePrice }) {
-  // const [aggregatePrice, setAggregatePrice] = React.useState(displayAggregatePrice.aggregatePrice);
-  // console.log(displayAggregatePrice);
-
-  
-  // const onTextChange = (value) => {
-  //   // setSquareFeet(value);
-  //   handleNextSection("squareFeet", value);
-  //   // if (event.keyCode === 13) return handleNextSection("zipCode", zipCode);
-  //   // console.log(event.keyCode);
-  // };
-
+export default function CreditCard({ handleNextSection, displayAggregatePrice, price}) {
 
   return (
     <div class="container">
@@ -26,9 +15,8 @@ export default function CreditCard({ handleNextSection, displayAggregatePrice })
         />
         <div class="card-title d-flex px-4">
           <p class="item text-muted">
-            Barcelona<label class="register">&reg;</label> Chair
+            AMIT CLEANING SERVICE CHARGE: {" "}  {price}
           </p>
-          <p>$5760</p>
         </div>
         <div class="card-body">
           <p class="text-muted">Your payment details</p>
