@@ -10,7 +10,7 @@ import {
   HowDidYou,
   HowOften,
   OfficeTypeClean,
-  Pets,
+  ParkingLot,
   PriceCalculator,
   ScheduleDate,
   SelectService,
@@ -30,51 +30,12 @@ import {
 import AppBar from "../components/AppBar";
 import axios from 'axios';
 
-// const sections = [
-//   "Zip Code",
-//   "Service Categories",
-//   "Select Service",
-//   "Number Of Rooms",
-//   "Number Of BathRooms",
-//   "CleanType",
-//   "AddOns",
-//   "SpecialProducts",
-//   "Vaccum",
-//   "Access",
-//   "Pets",
-//   "SpecialNotes",
-//   "HowDidYou",
-//   "ScheduleDate",
-//   "ServiceAddress",
-//   "HowOften",
-//   "CreditCard",
-//   "Success",
-// ];
 
-
-// "id": 6,
-//     "officeTypeClean": "OFFICE_CLEANING",
-//     "squareFeet": "UP_TO_2000",
-//     "addTip": 0.0,
-//     "howOften": "WEEKLY",
-//     "howToGetIn": null,
-//     "companyName": null,
-//     "password": null,
-//     "aggregatePrice": 440.0,
-//     "email": "mikky@email.com",
-//     "password2": null,
-//     "address": null,
-//     "roles": [],
-//     "scheduledDate": "2021-03-31T21:57:25.403+00:00",
-//     "specialNotes": null,
-//     "hasVacuum": false,
-//     "howDidYouHearAboutUs": null,
-//     "paymentMethod": null
 
 export default function BookNow() {
   const [activeSection, setActiveSection] = useState(0);
   const [displayPrice, setDisplayPrice] = useState(0);
-  // I am storing the values of the form fill or selected in the state for post request to the server
+  
   const [state, setState] = useState({
     organisation: { email: "", name: "" },
     officeTypeClean: "",
@@ -91,7 +52,7 @@ export default function BookNow() {
     // addOns: "",
     addTip: "",
     hasVaccum: "",
-    pets: "",
+    parkingLot: "",
     howDidYou: "",
     howOften: "",
     specialNotes: "",
@@ -102,50 +63,6 @@ export default function BookNow() {
     howDidYouHearAboutUs: ""
   });
 
-  // login = () => {
-  //   axios
-  //     .post("http://localHost:8080/login", this.state.student)
-  //     .then((response) => {
-  //       //we want to keep track of the user Id which is the email//
-  //       //the item takes the key first//
-  //       localStorage.setItem("loggedInUser", response.data.email);
-  //       //navigate tp thank you page
-  //       this.props.history.push("/home"); //we need to still know who logged in//
-  //     })
-  //     .catch((error) => {
-  //       //Display error message
-  //     });
-  // };
-
-  //  const displayAggregatePrice = () => {
-  //    const params = {
-  //      addTip: 0,
-  //      howOften: state.howOften,
-  //      officeTypeClean: state.cleanType,
-  //      squareFeet: state.squareFeet
-
-  //    }
-  //    axios.post("http://localHost:8080/aggregatePrice", {params})
-  //    .then((response) => { 
-  //      setDisplayPrice(response.data.aggregatePrice)
-  //    })
-
-  //  }
-
-  // const displayAggregatePrice = (howOften) => {
-  //   const params = {
-  //     addTip: 0,
-  //     howOften: howOften,
-  //     officeTypeClean: state.cleanType,
-  //     squareFeet: state.squareFeet,
-  //   };
-  //   axios
-  //     .post("http://localHost:8080/aggregatePrice", { params })
-  //     .then((response) => {
-  //       setDisplayPrice(response.data.aggregatePrice);
-  //       console.log({ response });
-  //     });
-  // };
   console.log(state)
   const displayAggregatePrice = (howOften) => {
     const params = {
@@ -185,8 +102,6 @@ export default function BookNow() {
         return <OfficeTypeClean handleNextSection={handleNext} data={state} />;
       case 3:
         return <SquareFeet data={state} handleNextSection={handleNext} />;
-    //   case 4:
-    //     return <NumberOfBathRooms handleNextSection={handleNext} />;
       case 4:
         return <CleanType handleNextSection={handleNext} />;
       case 5:
@@ -208,15 +123,13 @@ export default function BookNow() {
       case 13:
         return <HowOften data={state} handleNextSection={handleNext} displayAggregatePrice={displayAggregatePrice}/>;
       case 14:
-        return <CreditCard handleNextSection={handleNext} />;
+        return <CreditCard handleNextSection={handleNext} price={displayPrice} />;
       case 15:
         return <Success handleNextSection={handleNext} />;
       default:
         return null;
     }
   }
-
-  // console.log({ state });
 
   return (
     <>
@@ -240,7 +153,6 @@ export default function BookNow() {
       <Heading textAlign="center" color="blue">
         WANT A FRESH START? WE GOT YOU
       </Heading>
-      {/* <Heading>{sections[activeSection]}</Heading> */}
       <Box mt="20px">{getStepContent(activeSection)}</Box>
     </>
   );
