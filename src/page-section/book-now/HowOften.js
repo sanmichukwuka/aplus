@@ -16,11 +16,7 @@ export default function HowOften({ handleNextSection, data, displayAggregatePric
   const [howOften, setHowOften] = React.useState(data.howOften);
 
   const onTextChange = (value) => {
-    // setSquareFeet(value);
     displayAggregatePrice(value);
-    // handleNextSection("howOften", value);
-    // if (event.keyCode === 13) return handleNextSection("zipCode", zipCode);
-    // console.log(event.keyCode);
   };
 
 
@@ -59,11 +55,6 @@ export default function HowOften({ handleNextSection, data, displayAggregatePric
             <Text pl="35px" textAlign="start">
               Call 512-934-1967 for an accurate rate
             </Text>
-            <Divider />
-            {/* <Radio value="OTHER">Up_to_7000</Radio>
-            <Text pl="35px" textAlign="start">
-              Call 512-934-1967 for an accurate rate
-            </Text>{" "} */}
           </Stack>
         </RadioGroup>
       </Box>
